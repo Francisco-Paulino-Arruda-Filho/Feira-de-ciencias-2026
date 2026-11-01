@@ -27,7 +27,7 @@ const BOUNDARY_STEP = 17
 const MAX_ATTEMPTS = 12000
 const MAX_EDGE = 48
 
-function mulberry32(seed: number) {
+export function mulberry32(seed: number) {
   let t = seed >>> 0
   return () => {
     t += 0x6d2b79f5
