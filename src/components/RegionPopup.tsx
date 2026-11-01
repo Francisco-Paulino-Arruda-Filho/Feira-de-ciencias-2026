@@ -5,9 +5,10 @@ import type { Region } from '../data/regions'
 type Props = {
   region: Region
   onClose: () => void
+  docked?: boolean
 }
 
-export function RegionPopup({ region, onClose }: Props) {
+export function RegionPopup({ region, onClose, docked = false }: Props) {
   const side = region.anchor.x < VIEW.w / 2 ? 'right' : 'left'
   const style = {
     '--px': `${(region.anchor.x / VIEW.w) * 100}%`,
@@ -16,8 +17,8 @@ export function RegionPopup({ region, onClose }: Props) {
 
   return (
     <div
-      className={`popup popup--${side}`}
-      style={style}
+      className={docked ? 'popup popup--dock' : `popup popup--${side}`}
+      style={docked ? undefined : style}
       role="dialog"
       aria-labelledby="popup-title"
       aria-live="polite"
