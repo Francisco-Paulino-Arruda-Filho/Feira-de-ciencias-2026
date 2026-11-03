@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Lobotomia from "./pages/Lobotomia";
 import Neuromodulacao from "./pages/Neuromodulacao";
 import NotFound from "./pages/NotFound";
-import SaudeMental from "./pages/saudeMental";
+import SaudeMental from "./pages/SaudeMental";
 
 export default function App() {
   return (
