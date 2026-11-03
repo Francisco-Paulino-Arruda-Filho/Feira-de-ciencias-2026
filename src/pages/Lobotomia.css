@@ -1,0 +1,181 @@
+/* ---------- Página de Lobotomia ---------- */
+
+.lobotomy-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 12px 0 40px;
+}
+
+.lobotomy-hero {
+  text-align: center;
+  padding: 12px 16px;
+}
+
+.lobotomy-hero h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  background: linear-gradient(180deg, #ffffff 0%, #9fe9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lobotomy-lead {
+  max-width: 58ch;
+  margin: 0 auto;
+  color: var(--ink-dim);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* ---------- Cartão principal ---------- */
+
+.lobotomy-card {
+  padding: clamp(20px, 4vw, 34px);
+  border: 1px solid rgba(125, 226, 255, 0.22);
+  border-radius: 18px;
+  background: linear-gradient(
+    145deg,
+    rgba(12, 45, 64, 0.78),
+    rgba(6, 23, 35, 0.88)
+  );
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(125, 226, 255, 0.06);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lobotomy-section-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.section-indicator {
+  flex-shrink: 0;
+  width: 4px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--cyan);
+  box-shadow: 0 0 12px rgba(125, 226, 255, 0.7);
+}
+
+.lobotomy-section-title h2 {
+  color: #ffffff;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
+  font-weight: 600;
+}
+
+.lobotomy-card p {
+  margin-bottom: 18px;
+  color: #c3dde6;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  text-align: justify;
+}
+
+.lobotomy-card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Curiosidade histórica ---------- */
+
+.lobotomy-fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 26px;
+  border: 1px solid rgba(255, 207, 110, 0.35);
+  border-radius: 16px;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 207, 110, 0.09),
+    rgba(8, 32, 46, 0.65)
+  );
+  box-shadow:
+    0 8px 28px rgba(0, 0, 0, 0.15),
+    inset 0 0 20px rgba(255, 207, 110, 0.025);
+}
+
+.fact-icon {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 207, 110, 0.4);
+  border-radius: 12px;
+  background: rgba(255, 207, 110, 0.12);
+  color: var(--amber);
+  font-size: 1.4rem;
+  box-shadow: 0 0 16px rgba(255, 207, 110, 0.12);
+}
+
+.fact-label {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--amber);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+}
+
+.lobotomy-fact h2 {
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.lobotomy-fact p {
+  margin: 0;
+  color: #c3dde6;
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ---------- Responsividade ---------- */
+
+@media (max-width: 640px) {
+  .lobotomy-page {
+    gap: 20px;
+    padding-top: 4px;
+  }
+
+  .lobotomy-card {
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .lobotomy-card p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    text-align: left;
+  }
+
+  .lobotomy-fact {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .fact-icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .lobotomy-card,
+  .lobotomy-fact {
+    animation: popup-in 0.35s ease-out;
+  }
+}

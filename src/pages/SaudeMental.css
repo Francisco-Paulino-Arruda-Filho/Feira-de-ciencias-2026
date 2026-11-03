@@ -1,0 +1,224 @@
+/* ---------- Página de Saúde Mental ---------- */
+
+.mental-health-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 38px;
+  width: 100%;
+  max-width: 860px;
+  min-height: 520px;
+  margin: 0 auto;
+  padding: 24px 0 50px;
+}
+
+/* ---------- Cabeçalho ---------- */
+
+.mental-health-hero {
+  text-align: center;
+  padding: 12px 16px;
+}
+
+.mental-health-hero h1 {
+  margin-bottom: 14px;
+  font-size: clamp(2.2rem, 5vw, 3.25rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  background: linear-gradient(180deg, #ffffff 0%, #9fe9ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.mental-health-lead {
+  max-width: 58ch;
+  margin: 0 auto;
+  color: var(--ink-dim);
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* ---------- Mensagem principal ---------- */
+
+.mental-health-message {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: clamp(24px, 5vw, 44px);
+
+  border: 1px solid rgba(125, 226, 255, 0.3);
+  border-radius: 20px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(12, 45, 64, 0.88),
+    rgba(6, 23, 35, 0.92)
+  );
+
+  box-shadow:
+    0 16px 45px rgba(0, 0, 0, 0.22),
+    inset 0 1px 0 rgba(125, 226, 255, 0.08),
+    0 0 35px rgba(59, 191, 224, 0.07);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ---------- Símbolo ---------- */
+
+.mental-health-symbol {
+  display: grid;
+  flex-shrink: 0;
+  place-items: center;
+
+  width: 58px;
+  height: 58px;
+
+  border: 1px solid rgba(125, 226, 255, 0.4);
+  border-radius: 18px;
+
+  background: rgba(125, 226, 255, 0.1);
+  color: var(--cyan);
+
+  font-size: 1.8rem;
+
+  box-shadow:
+    0 0 20px rgba(125, 226, 255, 0.12),
+    inset 0 0 12px rgba(125, 226, 255, 0.05);
+}
+
+/* ---------- Frase ---------- */
+
+.mental-health-quote {
+  flex: 1;
+  min-width: 0;
+}
+
+.quote-label {
+  display: block;
+  margin-bottom: 12px;
+
+  color: var(--cyan-soft);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.mental-health-quote h2 {
+  max-width: 600px;
+  color: #ffffff;
+
+  font-size: clamp(1.7rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.quote-divider {
+  width: 64px;
+  height: 3px;
+  margin: 22px 0;
+
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--cyan),
+    rgba(125, 226, 255, 0.1)
+  );
+
+  box-shadow: 0 0 12px rgba(125, 226, 255, 0.35);
+}
+
+.mental-health-quote p {
+  max-width: 62ch;
+  color: #c3dde6;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+/* ---------- Rodapé ---------- */
+
+.mental-health-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 12px;
+}
+
+.mental-health-footer p {
+  color: #8fb4c2;
+  font-size: 0.85rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.footer-line {
+  width: 45px;
+  height: 1px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(125, 226, 255, 0.5)
+  );
+}
+
+/* ---------- Animações ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .mental-health-message {
+    animation: popup-in 0.4s ease-out;
+  }
+
+  .mental-health-symbol {
+    animation: twinkle 5s ease-in-out infinite;
+  }
+}
+
+/* ---------- Responsividade ---------- */
+
+@media (max-width: 640px) {
+  .mental-health-page {
+    gap: 26px;
+    min-height: auto;
+    padding: 8px 0 36px;
+  }
+
+  .mental-health-message {
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px 20px;
+    border-radius: 16px;
+  }
+
+  .mental-health-symbol {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    font-size: 1.5rem;
+  }
+
+  .mental-health-quote h2 {
+    font-size: 1.75rem;
+  }
+
+  .mental-health-quote p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .mental-health-footer {
+    gap: 8px;
+  }
+
+  .mental-health-footer p {
+    font-size: 0.78rem;
+  }
+
+  .footer-line {
+    width: 20px;
+  }
+}
