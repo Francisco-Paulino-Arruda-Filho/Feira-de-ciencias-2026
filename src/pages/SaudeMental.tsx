@@ -1,4 +1,4 @@
-import "./saudeMental.css";
+import "./SaudeMental.css";
 
 export default function SaudeMental() {
   return (
